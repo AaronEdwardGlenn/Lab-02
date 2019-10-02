@@ -10,17 +10,18 @@ document.getElementById('userGuess').onclick = function(){
     const funVariable = guessResult (guess, correctNumber); 
 
     if (funVariable === 0) {
-
         alert('Nice work! You guessed my number in '
         + guessN + ' tries '); 
         location.reload();
-
     }
+
+
     else if (funVariable === +1)
     {	 
         guessN++; 
         alert('Your number was too high!'); 
     } 
+
 
     else
     { 
@@ -28,20 +29,24 @@ document.getElementById('userGuess').onclick = function(){
         alert('Your number was too low!'); 
     } 
 
+
     if (guessN === 1)
     {
         alert('you have 3 guesses remaining');
     }
+
 
     if (guessN === 2)
     {
         alert('you have 2 guesses remaining');
     }
 
+
     if (guessN === 3)
     {
         alert('you have 1 guesses remaining');
     }
+
 
     if (guessN === 4)
     {
@@ -49,4 +54,5 @@ document.getElementById('userGuess').onclick = function(){
         location.reload();
     }
 
+    
 }; 

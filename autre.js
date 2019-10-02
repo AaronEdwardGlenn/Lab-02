@@ -1,7 +1,3 @@
-
-
-
-
 export function guessResult(guess, correctNumber) {
 
     if (guess === correctNumber) {
@@ -16,7 +12,6 @@ export function guessResult(guess, correctNumber) {
     else {
 
         return +1; 
-
     }
         
 }
