@@ -1,46 +1,51 @@
-let y = Math.floor(Math.random() * 20 + 1); 
-let guess = 0; 
+import { guessResult } from './autre.js';
+
+let correctNumber = Math.floor(Math.random() * 20 + 1); 
+let guessN = 0; 
 
 document.getElementById('userGuess').onclick = function(){ 
  
-    let x = document.getElementById('yourGuess').value; 
+    let guess = parseInt(document.getElementById('yourGuess').value); 
 
-    if (x == y) 
-    {	 
+    const funVariable = guessResult (guess, correctNumber); 
+
+    if (funVariable === 0) {
+
         alert('Nice work! You guessed my number in '
-        + guess + ' tries '); 
-    } 
+        + guessN + ' tries '); 
+        location.reload();
 
-    else if (x > y)
+    }
+    else if (funVariable === +1)
     {	 
-        guess++; 
+        guessN++; 
         alert('Your number was too high!'); 
     } 
 
     else
     { 
-        guess++; 
+        guessN++; 
         alert('Your number was too low!'); 
     } 
 
-    if (guess === 1)
+    if (guessN === 1)
     {
         alert('you have 3 guesses remaining');
     }
 
-    if (guess === 2)
+    if (guessN === 2)
     {
         alert('you have 2 guesses remaining');
     }
 
-    if (guess === 3)
+    if (guessN === 3)
     {
         alert('you have 1 guesses remaining');
     }
 
-    if (guess === 4)
+    if (guessN === 4)
     {
-        alert('Sorry! You have lost the guessing game. Please try again!');
+        alert('Sorry! You have lost the guessing game. My number was ' + correctNumber + ' Please try again!');
         location.reload();
     }
 

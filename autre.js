@@ -15,7 +15,7 @@ export function guessResult(guess, correctNumber) {
 
     else {
 
-        return 1; 
+        return +1; 
 
     }
         
