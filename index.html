@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guessing Game</title>
+  </head>
+  <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+    <h1>Let's Play the Guessing Game!</h1>
 
-<body>
+    <h2>Here are the rules of the game:</h2>
 
-    <script src="app.js"></script>
-</body>
+    <ol>
+      <li>I am thinking of a number</li>
+      <li>You need to think of my number too</li>
+      <li>You have 4 guesses to get my number correct</li>
+      <li>My number is between 1 and 20</li>
+      <li>After each guess, I will tell you if you are too high or too low</li>
+      <li>After 4 wrong guesses, you loose :( </li>
+    </ol>
 
+    <h2>Let the Games Begin!!</h2>
+
+    <input id = "guess" type="text">
+    <button id = 'guess-button'>Guess!</button>
+
+    <script src="./app.js"></script>
+
+  </body>
 </html>
